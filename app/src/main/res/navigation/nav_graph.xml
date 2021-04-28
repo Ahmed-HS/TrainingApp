@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/demoFragment">
+
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.app.training.ui.exercise.ExerciseListFragment"
+        android:label="ExerciseListFragment"
+        tools:layout="@layout/fragment_exercise_list"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.app.training.ui.dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"
+        />
+    <fragment
+        android:id="@+id/connectionLostFragment"
+        android:name="com.app.training.ui.connectionlost.ConnectionLostFragment"
+        android:label="ConnectionLostFragment"
+        tools:layout="@layout/fragment_connection_lost"
+        />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.app.training.ui.registration.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register"
+        />
+    <fragment
+        android:id="@+id/exercisesAddressFragment"
+        android:name="com.app.training.ui.exercise.withAddress.ExercisesAddressFragment"
+        android:label="ExercisesAddressFragment"
+        tools:layout="@layout/fragment_exercise_address"
+        />
+    <fragment
+        android:id="@+id/imageViewerFragment"
+        android:name="com.app.training.ui.imageViewer.ImageViewerFragment"
+        android:label="ImageViewerFragment"
+        tools:layout="@layout/fragment_image_viewer"
+        >
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+    </fragment>
+    <action android:id="@+id/action_global_imageViewerFragment"
+        app:destination="@id/imageViewerFragment"/>
+    <fragment
+        android:id="@+id/demoFragment"
+        android:name="com.app.training.ui.demoscreen.DemoFragment"
+        android:label="fragment_demo"
+        tools:layout="@layout/fragment_demo" >
+        <action
+            android:id="@+id/action_demoFragment_to_connectionLostFragment"
+            app:destination="@id/connectionLostFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_exercisesAddressFragment"
+            app:destination="@id/exercisesAddressFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_trackerFragment"
+            app:destination="@id/trackerFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_demoFragment_to_spendingFragment"
+            app:destination="@id/spendingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackerFragment"
+        android:name="com.app.training.ui.tracker.TrackerFragment"
+        android:label="fragment_tracker"
+        tools:layout="@layout/fragment_tracker" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.app.training.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/spendingFragment"
+        android:name="com.app.training.ui.spendingAnalytics.SpendingFragment"
+        android:label="SpendingFragment"
+        tools:layout="@layout/fragment_spending"
+        />
+</navigation>

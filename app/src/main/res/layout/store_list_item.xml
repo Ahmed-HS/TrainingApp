@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="?attr/colorSurface"
+    android:id="@+id/actionCard"
+    android:clickable="true"
+    android:layout_margin="10dp"
+    app:strokeColor="@color/offWhite_90"
+    android:minWidth="120dp"
+    app:strokeWidth="1dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Card.Rounded"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/storeImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/store"
+            app:layout_constraintBottom_toTopOf="@+id/storeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="Swiggy"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:textColor="?attr/textOnSurfaceMedium"
+            app:layout_constraintBottom_toTopOf="@+id/moneySpent"
+            app:layout_constraintStart_toStartOf="@+id/storeImage"
+            app:layout_constraintTop_toBottomOf="@+id/storeImage" />
+
+        <TextView
+            android:id="@+id/moneySpent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:text="2,479.64"
+            android:textColor="?attr/textOnSurfaceDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/storeName"
+            app:layout_constraintTop_toBottomOf="@+id/storeName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

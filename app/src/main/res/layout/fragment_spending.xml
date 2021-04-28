@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.spendingAnalytics.SpendingFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/backButton"
+            style="@style/TrainingApp.Button.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/analyticsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/hind_vadodara_semibold"
+            android:text="@string/spend_analytics_title"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintStart_toStartOf="@+id/backButton"
+            app:layout_constraintTop_toBottomOf="@id/backButton" />
+
+        <TextView
+            android:id="@+id/spendingDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/textOnSurfaceDark"
+            android:maxWidth="350dp"
+            android:text="@string/analytics_description"
+            app:layout_constraintTop_toBottomOf="@id/analyticsTitle"
+            app:layout_constraintStart_toStartOf="@id/analyticsTitle"
+            />
+
+        <LinearLayout
+            android:id="@+id/monthSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/offWhite_90"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spendingDescription">
+
+
+            <Button
+                android:id="@+id/previousMonth"
+                style="@style/TrainingApp.Button.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_navigate_before_24" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/nextMonth"
+                style="@style/TrainingApp.Button.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_navigate_next_24" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/summaryCharts"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monthSelector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <include
+                android:id="@+id/spentChart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                layout="@layout/analytics_chart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/monthSelector"
+                />
+
+            <View
+                android:background="@color/gray_120"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginVertical="8dp"
+                android:layout_height="2dp"/>
+
+            <include
+                android:id="@+id/receivedChart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                layout="@layout/analytics_chart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/monthSelector"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/favouritesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/hind_vadodara_semibold"
+            android:text="@string/favourites_stores"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintStart_toStartOf="@id/analyticsTitle"
+            app:layout_constraintTop_toBottomOf="@id/summaryCharts" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favouritesList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/store_list_item"
+            app:layout_constraintTop_toBottomOf="@id/favouritesTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/spendsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/hind_vadodara_semibold"
+            android:text="@string/spends_by_category"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintStart_toStartOf="@id/analyticsTitle"
+            app:layout_constraintTop_toBottomOf="@id/favouritesList" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/spendsList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="100dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spendsTitle"
+            tools:listitem="@layout/spending_card" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

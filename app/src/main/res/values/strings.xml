@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="search">Type to search</string>
+    <string name="morningButton">Morning</string>
+    <string name="eveningButton">Evening</string>
+    <string name="allFilter">ALL</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="addButton">Add</string>
+    <string name="otherAccounts">in other bank accounts</string>
+    <string name="expensesHint">Spent this week</string>
+    <string name="more">more</string>
+    <string name="less">less</string>
+    <string name="expenseSummaryStart">You have spent</string>
+    <string name="expenseSummaryEnd">than last week</string>
+    <string name="notOnline">Please connect to an active internet connection</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registerHeader">Hey there stranger!\nWho are you?</string>
+    <string name="searchBoothAction">Search Booth Details</string>
+    <string name="booth">Booth</string>
+    <string name="message">Message</string>
+    <string name="sendBroadcast">Send Broadcast Message</string>
+    <string name="sector">Sector</string>
+    <string name="searchSector">Search Sector Details</string>
+
+    <string name="deliveryIn">Delivery in %1$d mins</string>
+    <string name="profitandloss"><![CDATA[Profit & Loss]]></string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="lineSeparator">|</string>
+    <string name="joinButton">JOIN</string>
+    <string name="connection_lost">Connection Lost</string>
+    <string name="notConnectedString">Ooops! Looks like you are not connected to the internet</string>
+    <string name="check_settings">Check Settings</string>
+    <string name="try_again">Try again</string>
+    <string name="expense_manager">Expense manager</string>
+    <string name="addressButton">Address</string>
+    <string name="added_by">Added By</string>
+    <string name="profileName">Name</string>
+    <string name="profileStatus">Status</string>
+    <string name="status_enrolled">Enrolled</string>
+    <string name="profile_booth">Booth</string>
+    <string name="profile_booth_number">Up4238993</string>
+    <string name="first_name_input">First Name</string>
+    <string name="last_name_input">Last Name</string>
+    <string name="mobile_number_input">Mobile Number</string>
+    <string name="email_address_input">Email Address</string>
+    <string name="register_title">Register</string>
+    <string name="upload_photo_button">Upload photo</string>
+    <string name="spend_analytics_title">Spend Analytics</string>
+    <string name="analytics_description">Paytm Wallet, other wallets and Paytm gift voucher transactions</string>
+    <string name="favourites_stores">Favourites Stores</string>
+    <string name="spends_by_category">Spends by Category</string>
+    <string name="most_popular">Most popular</string>
+    <string name="most_popular_booth">Most popular booth around your locality</string>
+    <string name="most_popular_orders">Most popular orders around your locality</string>
+    <string name="slash">/</string>
+    <string name="before_time">Before Time!</string>
+
+
+    <string-array name="options">
+        <item>Array Item One</item>
+        <item>Array Item Two</item>
+        <item>Array Item Three</item>
+    </string-array>
+
+</resources>

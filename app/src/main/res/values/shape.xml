@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TrainingApp.ShapeAppearance.Button.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
+    <style name="TrainingApp.ShapeAppearance.Card.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="TrainingApp.ShapeAppearance.Card.TopRounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeTopRight">40dp</item>
+    </style>
+
+
+    <style name="TrainingApp.ShapeAppearance.Circle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TrainingApp.ShapeAppearance.ImageView.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="TrainingApp.ShapeOverlay.Chip" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="TrainingApp.ShapeOverlay.PopupIndicator.RightRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">3dp</item>
+        <item name="cornerSizeTopRight">3dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+    </style>
+
+</resources>

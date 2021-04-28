@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <color name="accentPink">@color/pink</color>
+    <color name="accentDarkPink">@color/darkPink</color>
+
+    <color name="black">@color/black_900</color>
+    <color name="surfaceColorLight">@color/white_900</color>
+    <color name="backgroundLight">@color/offWhite_200</color>
+    <color name="buttonBackgroundLight">@color/gray_100</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="separatorLight">@color/gray_200</color>
+    <color name="chipSelectedLight">@color/gray_400</color>
+    <color name="textHeadLineLight">@color/black_200</color>
+    <color name="textSubtitle">@color/gray_300</color>
+    <color name="overlayLight">@color/gray_110</color>
+    <color name="incomeColor">@color/Yellow_300</color>
+    <color name="expenseColor">@color/Red_200</color>
+
+
+    <!-- Palette colors -->
+    <!-- Colors for "internal use" only -->
+
+    <!-- Palette White -->
+    <color name="offWhite_90">#F7F9FB</color>
+    <color name="offWhite_100">#F9F9F9</color>
+    <color name="offWhite_200">#EEF0F4</color>
+    <color name="white_900">#FFFFFFFF</color>
+
+    <!-- Palette Yellow -->
+    <color name="Yellow_100">#FFF9D8</color>
+    <color name="Yellow_200">#FEE451</color>
+    <color name="Yellow_300">#FFB947</color>
+
+    <!-- Palette Orange -->
+    <color name="Orange_200">#FCC196</color>
+    <color name="orange_300">#FFA372</color>
+
+    <!-- Palette Green -->
+    <color name="Green_100">#F5FEFB</color>
+    <color name="Green_200">#D0F2E2</color>
+    <color name="Green_300">#21DC98</color>
+    <color name="Green_350">#2D8946</color>
+    <color name="Green_400">#00BFA5</color>
+
+    <!-- Palette Blue -->
+    <color name="Blue_100">#03B5FF</color>
+    <color name="Blue_200">#06224A</color>
+
+    <!-- Palette Red -->
+    <color name="Red_50">#FFF5F4</color>
+    <color name="Red_200">#DF7663</color>
+    <color name="Red_500">#BF5946</color>
+    <color name="Red_600">#E14B2F</color>
+
+    <!-- Palette pink -->
+    <color name="pink">#EA3D79</color>
+    <color name="darkPink">#9D3263</color>
+
+
+    <!-- Palette purple -->
+    <color name="purple_200">#E497CD</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+
+    <!-- Palette gray -->
+    <color name="gray_100">#F1F0F7</color>
+    <color name="gray_110">#66858585</color>
+    <color name="gray_120">#EBEBEB</color>
+    <color name="gray_200">#80B3B3B3</color>
+    <color name="gray_250">#ADAB9E</color>
+    <color name="gray_300">#B3B3B3</color>
+    <color name="gray_400">#6E707B</color>
+    <color name="gray_500">#525F6B</color>
+    <color name="gray_600">#494949</color>
+
+
+    <!-- Palette black -->
+    <color name="black_100">#575757</color>
+    <color name="black_200">#434343</color>
+    <color name="black_300">#191919</color>
+    <color name="black_900">#FF000000</color>
+
+
+    <array name="pieChartColors">
+        <item>@color/Green_300</item>
+        <item>@color/Blue_200</item>
+        <item>@color/Blue_100</item>
+        <item>@color/Red_200</item>
+        <item>@color/Orange_200</item>
+        <item>@color/Yellow_300</item>
+    </array>
+
+    <array name="incomeExpenseChartColors">
+        <item>@color/incomeColor</item>
+        <item>@color/expenseColor</item>
+    </array>
+</resources>

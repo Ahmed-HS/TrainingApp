@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/popupRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="40dp"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:id="@+id/monday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:padding="4dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/mondayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            />
+
+        <TextView
+            android:id="@+id/mondayNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="01" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        >
+
+        <TextView
+            android:id="@+id/tuesdayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            />
+
+        <TextView
+            android:id="@+id/tuesdayNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="02" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:padding="4dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        >
+
+        <TextView
+            android:id="@+id/wednesdayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            />
+
+        <TextView
+            android:id="@+id/wednesdayNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="03" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

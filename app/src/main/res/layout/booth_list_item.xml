@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="8dp"
+    android:checkable="true"
+    android:focusable="true"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/hind_vadodara_medium"
+            tools:text="Walk Fitness"
+            android:textAppearance="?textAppearanceSubtitle1"
+            android:textColor="?attr/textOnSurfaceDark"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintTop_toTopOf="@+id/photo" />
+
+
+        <Button
+            android:id="@+id/status"
+            style="@style/TrainingApp.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/Green_200"
+            android:enabled="false"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/before_time"
+            android:textColor="@color/Green_350"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Card.Rounded" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="Tom Arun | Begginer"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="?attr/textOnSurfaceDark"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressIndicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/subtitle"
+            app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            tools:text="56"
+            android:textSize="14sp"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/subtitle"
+            app:layout_constraintTop_toBottomOf="@+id/progressIndicator" />
+
+        <TextView
+            android:id="@+id/currentProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            tools:text="127"
+            android:textSize="14sp"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/number"
+            app:layout_constraintStart_toEndOf="@+id/number" />
+
+
+        <TextView
+            android:id="@+id/progressSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/currentProgress"
+            app:layout_constraintStart_toEndOf="@+id/currentProgress" />
+
+        <TextView
+            android:id="@+id/maxProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="500"
+            android:textSize="14sp"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/progressSeparator"
+            app:layout_constraintStart_toEndOf="@+id/progressSeparator" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Edit Text -->
+    <style name="TrainingApp.TextAppearance.EditTextHint" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?attr/textOnSurfaceDark</item>
+        <item name="fontFamily">@font/hind_vadodara_semibold</item>
+    </style>
+
+</resources>

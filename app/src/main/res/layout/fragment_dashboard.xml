@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/balanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/hind_vadodara_semibold"
+            android:text="2,65,012"
+            android:textAppearance="?attr/textAppearanceHeadline3"
+            android:textColor="?attr/textOnSurfaceDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/balanceSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/textOnSurfaceMedium"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:text="@string/current_balance"
+            app:layout_constraintStart_toStartOf="@+id/balanceText"
+            app:layout_constraintTop_toBottomOf="@+id/balanceText" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/addButton"
+            app:icon="@drawable/ic_add_circle_24"
+            style="@style/TrainingApp.Button.Rounded.BackgroundSurface"
+            app:layout_constraintBaseline_toBaselineOf="@+id/balanceText"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/actionList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/dashboard_action_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceSubtitle" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/otherAccountsItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionList">
+
+            <ImageView
+                android:id="@+id/moneyIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_credit_card"
+                app:tint="?attr/colorSecondary" />
+
+            <TextView
+                android:id="@+id/otherBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/hind_vadodara_semibold"
+                android:text="9,60,000"
+                android:textColor="?attr/textOnSurfaceDark"
+                app:layout_constraintBottom_toBottomOf="@+id/moneyIcon"
+                app:layout_constraintStart_toEndOf="@id/moneyIcon"
+                app:layout_constraintTop_toTopOf="@+id/moneyIcon" />
+
+            <TextView
+                android:id="@+id/balanceHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/hind_vadodara_medium"
+                android:text="@string/otherAccounts"
+                android:textColor="?attr/textOnSurfaceMedium"
+                app:layout_constraintBaseline_toBaselineOf="@+id/otherBalance"
+                app:layout_constraintStart_toEndOf="@id/otherBalance" />
+
+            <ImageView
+                android:id="@+id/otherAccounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_forward_24"
+                app:tint="?attr/textOnSurfaceMedium" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/expensesBlock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otherAccountsItem"
+            app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Card.TopRounded"
+            app:strokeColor="?attr/textOnSurfaceMedium"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+
+                <ImageView
+                    android:id="@+id/pieChart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pie_chart"
+                    app:tint="?attr/colorSecondary" />
+
+                <TextView
+                    android:id="@+id/expenseHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="@string/expense_manager"
+                    android:textAllCaps="true"
+                    android:textColor="?attr/textOnSurfaceMedium"
+                    app:layout_constraintBottom_toBottomOf="@id/pieChart"
+                    app:layout_constraintStart_toEndOf="@id/pieChart"
+                    app:layout_constraintTop_toTopOf="@id/pieChart" />
+
+                <TextView
+                    android:id="@+id/moneySpent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/hind_vadodara_semibold"
+                    android:text="4,201"
+                    android:textAppearance="?attr/textAppearanceHeadline4"
+                    android:textColor="?attr/textOnSurfaceDark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pieChart" />
+
+                <TextView
+                    android:id="@+id/expenseSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="@string/expensesHint"
+                    android:textColor="?attr/textOnSurfaceMedium"
+                    app:layout_constraintStart_toStartOf="@id/moneySpent"
+                    app:layout_constraintTop_toBottomOf="@id/moneySpent" />
+
+                <TextView
+                    android:id="@+id/expensesummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:maxWidth="90dp"
+                    android:text="@string/expensesHint"
+                    android:textColor="?attr/textOnSurfaceMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/moneySpent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/expensesList"
+                    android:layout_width="0dp"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/expenseSubtitle"
+                    tools:listitem="@layout/expenses_list_item" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="100dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expensesBlock">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/deliveryTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Delivery in 6 mins"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/timeStatus"
+                    style="@style/TrainingApp.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/Green_200"
+                    android:enabled="false"
+                    android:fontFamily="@font/hind_vadodara_medium"
+                    android:text="Before Time!"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textColor="@color/Green_350"
+                    app:layout_constraintBaseline_toBaselineOf="@id/deliveryTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Card.Rounded" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/deliveryProgress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/timeStatus"
+                    app:trackColor="@color/gray_200"
+                    app:trackCornerRadius="4dp"
+                    app:trackThickness="6dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/deliveryList"
+                    android:layout_width="0dp"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/deliveryProgress"
+                    tools:listitem="@layout/order_tracker_card" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

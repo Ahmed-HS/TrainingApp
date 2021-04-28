@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/legendMarker"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Circle"
+        android:background="@color/expenseColor" />
+
+    <TextView
+        android:id="@+id/legendLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Food &amp; Beverages"
+        />
+
+    <TextView
+        android:id="@+id/legendValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="?attr/textOnSurfaceSemiDark"
+        android:fontFamily="@font/hind_vadodara_semibold"
+        android:text="82%"
+        />
+
+</LinearLayout>

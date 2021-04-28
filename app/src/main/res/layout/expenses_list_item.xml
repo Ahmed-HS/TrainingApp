@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/cardBackgroundColor">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/expenseImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/starbucks"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/TrainingApp.ShapeAppearance.ImageView.Rounded" />
+
+    <TextView
+        android:id="@+id/expenseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="?attr/textOnSurfaceSemiDark"
+        android:layout_marginStart="12dp"
+        tools:text="Amy"
+        app:layout_constraintStart_toEndOf="@+id/expenseImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/expenseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="6:00 PM"
+        android:textSize="12sp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        android:textColor="?attr/textOnSurfaceMedium"
+        app:layout_constraintStart_toStartOf="@+id/expenseTitle"
+        app:layout_constraintTop_toBottomOf="@+id/expenseTitle" />
+
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        tools:text="6:00 PM"
+        android:textColor="?attr/textOnSurfaceMedium"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/callButton"
+        app:layout_constraintEnd_toStartOf="@+id/callButton"
+        app:layout_constraintTop_toTopOf="@+id/callButton" />
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:icon="@drawable/ic_call_24"
+        app:iconTint="?attr/colorSecondary"
+        style="@style/TrainingApp.Button.IconOnly"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

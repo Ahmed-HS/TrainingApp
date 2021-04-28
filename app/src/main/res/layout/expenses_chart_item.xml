@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="24dp"
+    android:clickable="true"
+    android:background="?attr/colorSurface"
+    android:layout_marginVertical="10dp"
+    app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Card.Rounded">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/reportHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/hind_vadodara_semibold"
+            android:text="@string/profitandloss"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/separatorLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reportHeader" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/incomeColor"
+            app:layout_constraintBottom_toBottomOf="@+id/pieChart"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/separator"
+            app:layout_constraintVertical_bias="0.19999999"
+            app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Circle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/expenseColor"
+            app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toBottomOf="@+id/incomeNumber"
+            app:shapeAppearance="@style/TrainingApp.ShapeAppearance.Circle" />
+
+        <TextView
+            android:id="@+id/incomeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:text="@string/income"
+            app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+        <TextView
+            android:id="@+id/expenseLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/expense"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView2"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView2"
+            app:layout_constraintTop_toTopOf="@+id/shapeableImageView2" />
+
+        <TextView
+            android:id="@+id/incomeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:textSize="20sp"
+            tools:text="928,770"
+            android:textColor="?attr/textOnSurfaceDark"
+            app:layout_constraintStart_toStartOf="@+id/incomeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/incomeLabel" />
+
+        <TextView
+            android:id="@+id/expensesNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hind_vadodara_medium"
+            tools:text="327,819"
+            android:textColor="?attr/textOnSurfaceDark"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/expenseLabel"
+            app:layout_constraintTop_toBottomOf="@+id/expenseLabel" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

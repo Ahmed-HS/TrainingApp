@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="8dp"
+    android:checkable="true"
+    android:focusable="true"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/icon"
+            android:layout_width="10dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="12dp"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/hind_vadodara"
+            tools:text="Walk Fitness"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="?attr/textOnSurfaceDark"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintTop_toTopOf="@+id/photo" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="Tom Arun"
+            android:textSize="14sp"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/lineSeparator"
+            android:textAppearance="?textAppearanceCaption"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/subtitle"
+            app:layout_constraintStart_toEndOf="@id/subtitle" />
+
+        <TextView
+            android:id="@+id/difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textAppearance="?textAppearanceCaption"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/subtitle"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            tools:text="Begginer" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            tools:text="50 Min"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/joinBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/joinButton"
+            style="@style/TrainingApp.MaterialButton"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+
+        <Button
+            android:id="@+id/shareBtn"
+            style="@style/TrainingApp.Button.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:icon="@drawable/ic_share"
+            app:iconTint="?attr/colorChipSelected"
+            app:layout_constraintBottom_toBottomOf="@+id/joinBtn"
+            app:layout_constraintEnd_toStartOf="@+id/joinBtn"
+            app:layout_constraintTop_toTopOf="@+id/joinBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

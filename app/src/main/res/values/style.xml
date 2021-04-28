@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Edit Text -->
+    <style name="TrainingApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="materialThemeOverlay">@style/TrainingApp.ThemeOverlay.TextInputLayout</item>
+        <item name="hintTextAppearance">@style/TrainingApp.TextAppearance.EditTextHint</item>
+        <item name="android:textColorHint">?attr/textOnSurfaceDark</item>
+    </style>
+
+    <style name="TrainingApp.ThemeOverlay.TextInputLayout" parent="">
+        <item name="colorPrimary">?attr/textOnSurfaceDark</item>
+        <item name="colorSecondary">?attr/textOnSurfaceDark</item>
+        <item name="colorOnSurface">?attr/textOnSurfaceDark</item>
+        <item name="colorError">@color/Red_200</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="textAppearanceCaption">@style/TrainingApp.TextAppearance.EditTextHint</item>
+        <item name="editTextStyle">@style/TrainingApp.EditText</item>
+    </style>
+
+    <style name="TrainingApp.EditText" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:paddingTop">32dp</item>
+        <item name="android:paddingStart">3dp</item>
+    </style>
+
+    <!-- - - - - - - - - - - - - - - -->
+
+    <!-- Buttons -->
+
+    <style name="TrainingApp.MaterialCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/offWhite_100</item>
+    </style>
+
+    <style name="TrainingApp.MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorButtonBackground</item>
+        <item name="android:textColor">?attr/colorSecondaryVariant</item>
+        <item name="shapeAppearance">@style/TrainingApp.ShapeAppearance.Button.Rounded</item>
+        <item name="android:fontFamily">@font/hind_vadodara_semibold</item>
+        <item name="android:minWidth">2dp</item>
+        <item name="android:minHeight">2dp</item>
+    </style>
+
+    <style name="TrainingApp.MaterialButton.White" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/hind_vadodara</item>
+        <item name="android:minWidth">2dp</item>
+        <item name="android:minHeight">60dp</item>
+    </style>
+
+    <style name="TrainingApp.Button.Rounded.BackgroundSurface" parent="TrainingApp.MaterialButton">
+        <item name="android:textColor">?attr/textOnSurfaceDark</item>
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="iconTint">?attr/colorSecondary</item>
+        <item name="elevation">6dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">4dp</item>
+    </style>
+
+    <style name="TrainingApp.TextButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="backgroundTint">@color/transparent</item>
+    </style>
+
+    <style name="TrainingApp.Button.IconOnly" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="iconTint">?attr/colorOnSurface</item>
+    </style>
+
+    <!-- - - - - - - - - - - - - - - -->
+
+    <!-- Chip -->
+
+    <style name="TrainingApp.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_bg_color</item>
+        <item name="android:textColor">@color/chip_txt_color</item>
+        <item name="chipStrokeColor">@color/separatorLight</item>
+        <item name="rippleColor">@color/separatorLight</item>
+        <item name="android:textSize">11sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/hind_vadodara_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="chipStrokeWidth">2dp</item>
+        <item name="shapeAppearanceOverlay">@style/TrainingApp.ShapeOverlay.Chip</item>
+        <item name="chipStartPadding">18dp</item>
+        <item name="chipEndPadding">18dp</item>
+        <item name="chipMinHeight">40dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="8dp"
+    android:checkable="true"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/orderImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/starbucks"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/TrainingApp.ShapeAppearance.ImageView.Rounded" />
+
+        <TextView
+            android:id="@+id/orderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:fontFamily="@font/hind_vadodara_medium"
+            android:textColor="?attr/textOnSurfaceSemiDark"
+            android:layout_marginStart="12dp"
+            tools:text="Amy"
+            app:layout_constraintStart_toEndOf="@id/orderImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orderDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Way to deliver your order"
+            android:textSize="12sp"
+            android:textColor="?attr/textOnSurfaceSemiDark"
+            app:layout_constraintStart_toStartOf="@id/orderTitle"
+            app:layout_constraintTop_toBottomOf="@id/orderTitle" />
+
+
+        <Button
+            android:id="@+id/callButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:icon="@drawable/ic_call_24"
+            app:iconTint="?attr/colorSecondary"
+            style="@style/TrainingApp.Button.IconOnly"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

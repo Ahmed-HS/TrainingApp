@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorOnButton" format="color"/>
+    <attr name="colorButtonBackground" format="color"/>
+    <attr name="colorChipSelected" type="color"/>
+    <attr name="textOnSurfaceDark" type="color"/>
+    <attr name="textOnSurfaceSemiDark" type="color"/>
+    <attr name="textOnSurfaceMedium" type="color"/>
+    <attr name="textOnSurfaceLight" type="color"/>
+    <attr name="separatorColor" type="color"/>
+</resources>
